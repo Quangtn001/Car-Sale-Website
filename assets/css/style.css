@@ -24,7 +24,6 @@ img {
 }
 
 body {
-    background-color: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -157,7 +156,7 @@ section {
     min-height: 640px;
     display: flex;
     align-items: center;
-    background: url(/assets/image/Background-home.png);
+    background: url(../image/Background-home.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center left;
