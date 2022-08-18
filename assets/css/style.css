@@ -39,6 +39,8 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    background-color: var(--bg-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 section {
@@ -72,29 +74,38 @@ section {
     color: var(--main-color);
 }
 
-.navbar {
+.navbar ul {
     display: flex;
     column-gap: 2rem;
 }
 
-.navbar a {
+.navbar ul li a {
     color: var(--text-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
 }
 
-.navbar a:hover,
-.navbar .active {
+.navbar ul li a:hover {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
     transition: all .1s ease-out;
 }
 
+.navbar ul li.active a {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
 #search-icon {
     font-size: 24px;
     cursor: pointer;
-    color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#search-icon:hover {
+    transform: scale(1.5);
+    transition: all .3s;
 }
 
 .search-box {
@@ -194,4 +205,210 @@ section {
     color: var(--main-color);
     border: 1px solid var(--main-color);
     transition: all .3s ease;
+}
+
+
+/* Car section */
+
+.heading {
+    position: relative;
+    text-align: center;
+}
+
+.heading p {
+    font-weight: 700;
+    color: var(--main-color);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.heading h2 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.heading span {
+    font-size: 0.938rem;
+    font-weight: 400;
+}
+
+.cars-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cars-container .box {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.cars-container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cars-container .box img:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+}
+
+.cars-container .box h2 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    background: var(--main-color);
+    color: #fff;
+    padding: 8px;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.cars-container .box:hover h2 {
+    background: var(--bg-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: all .5s ease;
+}
+
+.actions {
+    position: absolute;
+    display: flex;
+    font-weight: 700;
+    font-size: 1rem;
+    background: transparent;
+    bottom: 1rem;
+    right: 1rem;
+    display: none;
+    align-items: center;
+}
+
+.actions i {
+    color: var(--bg-color);
+    font-size: 1.8rem;
+    padding: 8px;
+    border-radius: 0.5rem;
+}
+
+.actions i:hover {
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    transition: all .3s ease;
+}
+
+.cars-container .box:hover .actions {
+    display: block;
+    transition: all .6s ease-out;
+}
+
+
+/* About */
+
+.about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about-image {
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text h1 {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.about-text h2 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.about-text p {
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.4rem;
+}
+
+
+/* Parts */
+
+.part-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.part-container .box {
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background: #f6f6f6;
+    border-radius: 0.5rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    gap: 10px;
+}
+
+.part-container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 1rem;
+    cursor: zoom-in;
+}
+
+.part-container .box h3 {
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.part-container .box h3:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.part-container .box span {
+    font-weight: 700;
+}
+
+.part-container .box i {
+    color: var(--main-color);
+}
+
+.part-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.part-button .details {
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.part-button .details:hover {
+    color: var(--main-color);
+    transition: 0.3s;
 }
