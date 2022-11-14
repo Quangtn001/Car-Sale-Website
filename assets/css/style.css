@@ -628,7 +628,7 @@ section {
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:500px) {
     .search-box input {
         padding: 11px;
     }
